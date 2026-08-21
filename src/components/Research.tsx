@@ -14,12 +14,12 @@ interface TimelineItem {
 
 const TIMELINE_DATA: TimelineItem[] = [
   {
-    role: "Undergraduate Thesis Researcher",
-    org: "Comilla University",
-    supervisor: "Dr. Mahmudul Hasan",
-    duration: "Jan 2026 – Present",
+    role: "Researcher — Independent Research",
+    org: "Self-directed",
+    supervisor: "BanLegit-Cite",
+    duration: "May 2026 – Aug 2026",
     highlights: [
-      "Investigating privacy-preserving IoT security through Federated Learning and Explainable AI for trust-aware anomaly detection.",
+      "Developed a benchmark for evaluating legal citation reliability and fabrication in Bangladeshi law using verified case law, statutory sources, and human annotation.",
     ],
   },
   {
