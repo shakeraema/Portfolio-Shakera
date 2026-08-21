@@ -100,9 +100,9 @@ export default function Hero() {
             variants={itemVariants}
             className="text-md sm:text-lg font-medium text-muted-text space-y-1 mb-6 leading-relaxed"
           >
-            <p>Software Engineering Graduate</p>
-            <p>AI/ML Research Enthusiast</p>
-            <p>Aspiring Researcher in NLP, Speech Processing & HCI</p>
+            <p>Software Engineering Graduate — SUST</p>
+            <p>AI/ML Researcher & Engineer</p>
+            <p>Specializing in Trustworthy AI, NLP, Speech Processing & Human-AI Interaction</p>
           </motion.div>
 
           {/* Research Statement */}
@@ -110,7 +110,7 @@ export default function Hero() {
             variants={itemVariants}
             className="text-base sm:text-lg text-foreground max-w-xl italic border-l-2 md:border-l-4 border-accent pl-4 py-1 mb-8 text-left leading-relaxed text-muted-text"
           >
-            &ldquo;Passionate about developing intelligent systems that bridge human-centered design, language technologies, and trustworthy AI.&rdquo;
+            &ldquo;Dedicated to engineering secure, trustworthy, and safe AI systems by bridging Natural Language Processing, Human-AI Interaction, and privacy-preserving machine learning.&rdquo;
           </motion.p>
 
           {/* CTA Buttons */}
@@ -119,7 +119,7 @@ export default function Hero() {
             className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mb-8 w-full"
           >
             <a
-              href="https://drive.google.com/file/d/1MS7bcQuJ13e51YdBHTRPKzmXCajF9F-A/view?usp=sharing"
+              href="https://drive.google.com/file/d/1g5-SOSOktS_eCuR3w-JctR3pYF2Jh8D2/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-6 h-12 bg-foreground text-background font-medium rounded-md hover:opacity-90 transition-opacity w-full sm:w-auto justify-center shadow-sm cursor-pointer"

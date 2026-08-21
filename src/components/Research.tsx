@@ -8,6 +8,7 @@ interface TimelineItem {
   role: string;
   org: string;
   supervisor?: string;
+  supervisorLabel?: string;
   duration: string;
   highlights: string[];
 }
@@ -16,7 +17,8 @@ const TIMELINE_DATA: TimelineItem[] = [
   {
     role: "Researcher — Independent Research",
     org: "Self-directed",
-    supervisor: "BanLegit-Cite",
+    supervisor: "BanLegit-Cite: A Benchmark for Legal Citation Reliability in Bangladeshi Law",
+    supervisorLabel: "Project",
     duration: "May 2026 – Aug 2026",
     highlights: [
       "Developed a benchmark for evaluating legal citation reliability and fabrication in Bangladeshi law using verified case law, statutory sources, and human annotation.",
@@ -25,7 +27,8 @@ const TIMELINE_DATA: TimelineItem[] = [
   {
     role: "Researcher — Independent Research",
     org: "Self-directed",
-    supervisor: "From Forgetting to Factuality",
+    supervisor: "From Forgetting to Factuality: Formalizing the Unlearning–Hallucination Interaction in Large Language Models",
+    supervisorLabel: "Project",
     duration: "Apr 2026 – May 2026",
     highlights: [
       "Proposed the UHIF framework and HalUnlearn-Bench through a systematic review of 57 papers on LLM unlearning and hallucination.",
@@ -35,6 +38,7 @@ const TIMELINE_DATA: TimelineItem[] = [
     role: "R&D Research Intern — Bangla Speech Processing",
     org: "ShellBeeHaken Ltd., Dhaka",
     supervisor: "Agentic Call Center STT/TTS Pipeline",
+    supervisorLabel: "Project",
     duration: "Dec 2025 – May 2026",
     highlights: [
       "Built a modular Bangla STT pipeline for noisy, code-mixed speech and benchmarked 15+ preprocessing and ASR configurations.",
@@ -46,6 +50,7 @@ const TIMELINE_DATA: TimelineItem[] = [
     role: "Undergraduate Thesis Researcher",
     org: "Shahjalal University of Science and Technology (SUST)",
     supervisor: "Ms. Sayma Sultana Chowdhury (Assistant Professor, IICT, SUST)",
+    supervisorLabel: "Supervisor",
     duration: "Jun 2025 – Nov 2025",
     highlights: [
       "Conducted mixed-methods usability evaluation (n=92; survey, think-aloud, interviews) using SUS and NASA-TLX to assess university web-system usability.",
@@ -65,28 +70,33 @@ interface Node {
 }
 
 const NODES: Node[] = [
-  { id: "aiml", label: "AI/ML", description: "Foundational Artificial Intelligence and Deep Learning architectures.", x: 50, y: 50, color: "var(--color-accent)" },
-  { id: "nlp", label: "NLP", description: "Natural Language Processing and Bangla Language Technologies.", x: 20, y: 30, color: "#f59e0b" },
-  { id: "speech", label: "Speech Processing", description: "Acoustic Modeling, ASR, and Speech Synthesis systems.", x: 15, y: 65, color: "#10b981" },
-  { id: "hci", label: "HCI & Usability", description: "Human-Computer Interaction, user workloads, and interface accessibility.", x: 45, y: 15, color: "#ec4899" },
+  { id: "aiml", label: "AI/ML & Multimodal", description: "Foundational Artificial Intelligence, Deep Learning, and Multimodal architectures.", x: 50, y: 50, color: "var(--color-accent)" },
+  { id: "nlp", label: "NLP & LLMs", description: "Natural Language Processing, Large Language Models, and Bangla language technologies.", x: 20, y: 30, color: "#f59e0b" },
+  { id: "speech", label: "Speech & Language", description: "Acoustic Modeling, ASR, and Speech Synthesis systems.", x: 15, y: 65, color: "#10b981" },
+  { id: "hci", label: "Human-AI Interaction (HCI)", description: "Designing intuitive, safe interfaces and evaluating human-AI collaboration workloads (HCI & Usability).", x: 45, y: 15, color: "#ec4899" },
   { id: "xai", label: "Explainable AI (XAI)", description: "Interpretability, model explanation methods, and trustworthy AI.", x: 80, y: 30, color: "#8b5cf6" },
-  { id: "fed", label: "Federated Learning", description: "Privacy-preserving distributed machine learning systems.", x: 85, y: 65, color: "#3b82f6" },
-  { id: "iot", label: "IoT Security", description: "Decentralized intrusion detection and sensor network verification.", x: 55, y: 85, color: "#ef4444" },
+  { id: "ppml", label: "Privacy & Federated Learning", description: "Distributed federated learning models and secure, privacy-preserving machine learning architectures.", x: 85, y: 65, color: "#3b82f6" },
+  { id: "safety", label: "AI Safety & IoT Security", description: "Ensuring model safety, robustness, prompt injection guardrails, and decentralized IoT Security protocols.", x: 55, y: 85, color: "#ef4444" },
+  { id: "agentic", label: "Agentic AI", description: "Multi-agent workflows, autonomous reasoning, and server-side role-based coordination.", x: 25, y: 85, color: "#14b8a6" },
 ];
 
 const EDGES = [
   { source: "aiml", target: "nlp" },
   { source: "aiml", target: "speech" },
   { source: "aiml", target: "xai" },
-  { source: "aiml", target: "fed" },
-  { source: "aiml", target: "iot" },
+  { source: "aiml", target: "ppml" },
+  { source: "aiml", target: "safety" },
+  { source: "aiml", target: "agentic" },
   { source: "nlp", target: "speech" },
   { source: "nlp", target: "hci" },
+  { source: "nlp", target: "agentic" },
   { source: "speech", target: "hci" },
+  { source: "speech", target: "agentic" },
   { source: "hci", target: "xai" },
-  { source: "xai", target: "fed" },
-  { source: "xai", target: "iot" },
-  { source: "fed", target: "iot" },
+  { source: "xai", target: "ppml" },
+  { source: "xai", target: "safety" },
+  { source: "ppml", target: "safety" },
+  { source: "safety", target: "agentic" },
 ];
 
 export default function Research() {
@@ -148,7 +158,7 @@ export default function Research() {
                       {item.supervisor && (
                         <div className="flex items-center gap-1">
                           <User size={12} />
-                          <span>Advisor: {item.supervisor}</span>
+                          <span>{item.supervisorLabel || "Advisor"}: {item.supervisor}</span>
                         </div>
                       )}
                     </div>

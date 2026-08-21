@@ -27,15 +27,16 @@ export default function Page() {
       "https://github.com/shakeraema"
     ],
     "knowsAbout": [
-      "Artificial Intelligence",
-      "Machine Learning",
-      "Deep Learning",
+      "Trustworthy AI",
+      "Large Language Models",
+      "Agentic AI",
       "Natural Language Processing",
-      "Speech Processing",
-      "Human-Computer Interaction",
+      "Speech & Language Technology",
+      "Multimodal AI",
       "Explainable AI",
-      "Federated Learning",
-      "IoT Security"
+      "AI Safety",
+      "Human-AI Interaction",
+      "Privacy-Preserving Machine Learning"
     ]
   };
 

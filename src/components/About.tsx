@@ -6,14 +6,16 @@ import { motion } from "framer-motion";
 import { BookOpen, Award, CheckCircle, GraduationCap } from "lucide-react";
 
 const RESEARCH_INTERESTS = [
-  "Human-Computer Interaction",
-  "Usability Engineering",
-  "Speech Processing",
+  "Trustworthy AI",
+  "Large Language Models",
+  "Agentic AI",
   "Natural Language Processing",
-  "Bangla Language Technology",
-  "IoT Security",
-  "Federated Learning",
+  "Speech & Language Technology",
+  "Multimodal AI",
   "Explainable AI",
+  "AI Safety",
+  "Human-AI Interaction",
+  "Privacy-Preserving Machine Learning",
 ];
 
 export default function About() {

@@ -63,6 +63,22 @@ const PROJECTS_DATA: ProjectItem[] = [
     demo: "https://pathik-db6ee.web.app/",
     category: "Fullstack/HCI",
   },
+  {
+    title: "Multi-role AI School Assistant (GLM 5.2)",
+    description:
+      "A multi-role AI school assistant featuring server-side role authorization, predictive ML attendance analytics, a real-time voice loop, and prompt injection guardrails.",
+    technologies: ["GLM 5.2", "Python", "Predictive ML", "Security Guardrails"],
+    github: "https://github.com/shakeraema/XYZ-AI.git",
+    category: "AI/ML",
+  },
+  {
+    title: "Secure Assignment & Submission System",
+    description:
+      "A secure, role-based Assignment & Submission Management System featuring robust authorization checks, secure httpOnly cookie authentication, CSRF protections, local file upload validation, and full business logic coverage for Admins, Teachers, and Students.",
+    technologies: ["ASP.NET Core 8", "EF Core", "PostgreSQL", "React (Vite)"],
+    github: "https://github.com/shakeraema/Assignment-Submission-Management-System.git",
+    category: "Fullstack/HCI",
+  },
 ];
 
 export default function Projects() {

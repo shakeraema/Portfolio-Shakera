@@ -33,9 +33,29 @@ const CERTIFICATIONS_DATA: Certification[] = [
     year: "2023",
   },
   {
-    name: "Blockchain Olympiad Bangladesh",
-    issuer: "Blockchain Olympiad Bangladesh Committee",
-    year: "2024",
+    name: "NASA Space Apps Challenge Global Finalist",
+    issuer: "NASA Space Apps Challenge",
+    year: "2025",
+  },
+  {
+    name: "Best Paper Award (ML & AI)",
+    issuer: "Leading University Research Society (LURS)",
+    year: "2026",
+  },
+  {
+    name: "Pre-Finalist — ICSC",
+    issuer: "Indian Computing Olympiad / ICSC",
+    year: "2026",
+  },
+  {
+    name: "Finalist — International AI in Healthcare Hackathon",
+    issuer: "Tashkent, Uzbekistan",
+    year: "2026",
+  },
+  {
+    name: "Top-30 Finalist (24th) — THE INFINITY AI BUILDFEST",
+    issuer: "The Infinity AI Buildfest",
+    year: "2026",
   },
 ];
 
