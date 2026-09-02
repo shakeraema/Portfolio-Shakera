@@ -119,7 +119,7 @@ export default function Hero() {
             className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mb-8 w-full"
           >
             <a
-              href="https://drive.google.com/file/d/1g5-SOSOktS_eCuR3w-JctR3pYF2Jh8D2/view?usp=sharing"
+              href="https://drive.google.com/file/d/1_87S5NwIQkmKmdW_8w0gOo6I_tSx47h8/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-6 h-12 bg-foreground text-background font-medium rounded-md hover:opacity-90 transition-opacity w-full sm:w-auto justify-center shadow-sm cursor-pointer"

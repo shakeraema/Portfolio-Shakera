@@ -97,7 +97,7 @@ export default function About() {
                   <span className="text-xs sm:text-sm font-medium text-muted-text">Cumulative GPA</span>
                   <div className="flex items-center gap-1.5 bg-accent/5 text-accent px-3 py-1 rounded-full text-xs font-semibold">
                     <Award size={12} />
-                    <span>3.70 / 4.00 (Through 7th Sem)</span>
+                    <span>3.69 / 4.00 </span>
                   </div>
                 </div>
               </div>

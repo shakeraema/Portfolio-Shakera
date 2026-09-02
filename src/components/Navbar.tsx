@@ -19,34 +19,16 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
-    // Initialize theme based on system/localStorage
-    const stored = localStorage.getItem("color-scheme") as "light" | "dark" | null;
-    const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    
-    const initialTheme = stored || (systemDark ? "dark" : "light");
-    
-    const timer = setTimeout(() => {
-      setTheme(initialTheme);
-    }, 0);
-    
-    // Set meta tag and html class
-    const meta = document.querySelector('meta[name="color-scheme"]');
-    if (meta) {
-      meta.setAttribute("content", initialTheme);
-    }
-    if (initialTheme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+    // Read current DOM state set by blocking head script or user selection
+    const isDark = document.documentElement.classList.contains("dark");
+    setTheme(isDark ? "dark" : "light");
 
-    // Set up media query listener for system theme changes
+    // Set up media query listener for system theme changes if no explicit user override is stored
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     const handleChange = (e: MediaQueryListEvent) => {
       if (!localStorage.getItem("color-scheme")) {
         const nextTheme = e.matches ? "dark" : "light";
         setTheme(nextTheme);
-        if (meta) meta.setAttribute("content", nextTheme);
         if (nextTheme === "dark") {
           document.documentElement.classList.add("dark");
         } else {
@@ -59,7 +41,7 @@ export default function Navbar() {
     // Set up intersection observer for active section highlighting
     const observerOptions = {
       root: null,
-      rootMargin: "-40% 0px -50% 0px", // Focus on middle portion of viewport
+      rootMargin: "-40% 0px -50% 0px",
       threshold: 0,
     };
 
@@ -78,7 +60,6 @@ export default function Navbar() {
     });
 
     return () => {
-      clearTimeout(timer);
       mediaQuery.removeEventListener("change", handleChange);
       observer.disconnect();
     };
@@ -88,12 +69,7 @@ export default function Navbar() {
     const nextTheme = theme === "dark" ? "light" : "dark";
     setTheme(nextTheme);
     localStorage.setItem("color-scheme", nextTheme);
-    
-    const meta = document.querySelector('meta[name="color-scheme"]');
-    if (meta) {
-      meta.setAttribute("content", nextTheme);
-    }
-    
+
     if (nextTheme === "dark") {
       document.documentElement.classList.add("dark");
     } else {
@@ -105,7 +81,7 @@ export default function Navbar() {
     setIsOpen(false);
     const element = document.getElementById(id);
     if (element) {
-      const navbarHeight = 64; // Approx height of sticky navbar
+      const navbarHeight = 64;
       const offsetPosition = element.offsetTop - navbarHeight;
       window.scrollTo({
         top: offsetPosition,

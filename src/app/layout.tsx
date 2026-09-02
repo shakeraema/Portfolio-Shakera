@@ -50,17 +50,17 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} h-full antialiased scroll-smooth`}
     >
       <head>
-        <meta name="color-scheme" content="light dark" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
               try {
-                const colorScheme = localStorage.getItem("color-scheme");
-                if (colorScheme) {
-                  document.querySelector('meta[name="color-scheme"]').content = colorScheme;
-                  if (colorScheme === 'dark') {
-                    document.documentElement.classList.add('dark');
-                  }
+                const stored = localStorage.getItem("color-scheme");
+                const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+                const theme = stored || (systemDark ? "dark" : "light");
+                if (theme === "dark") {
+                  document.documentElement.classList.add("dark");
+                } else {
+                  document.documentElement.classList.remove("dark");
                 }
               } catch (e) {}
             `,
