@@ -6,16 +6,14 @@ import { motion } from "framer-motion";
 import { BookOpen, Award, CheckCircle, GraduationCap } from "lucide-react";
 
 const RESEARCH_INTERESTS = [
+  "Human-Computer Interaction",
+  "Mixed-Methods User Research",
   "Trustworthy AI",
   "Large Language Models",
-  "Agentic AI",
   "Natural Language Processing",
   "Speech & Language Technology",
-  "Multimodal AI",
   "Explainable AI",
-  "AI Safety",
-  "Human-AI Interaction",
-  "Privacy-Preserving Machine Learning",
+  "Agentic AI",
 ];
 
 export default function About() {
@@ -114,25 +112,27 @@ export default function About() {
               className="space-y-6"
             >
               <h3 className="font-serif text-2xl font-semibold text-foreground leading-tight">
-                Academic Background & Aspirations
+                Academic Background & Research Interests
               </h3>
-              
+
               <div className="space-y-4 text-muted-text text-sm sm:text-base leading-relaxed">
                 <p>
-                  As a Software Engineering graduate from Shahjalal University of Science and Technology, 
-                  I have built a strong analytical foundation focused on designing systems that are 
-                  both technically robust and human-centered.
+                  I am a Software Engineering graduate of Shahjalal University of Science and Technology (SUST).
+                  My research sits between human–computer interaction and language technology: how people,
+                  especially Bangla speakers, experience the systems built for them, and where those systems fail.
                 </p>
                 <p>
-                  My research path lies at the intersection of language technologies, usability, and secure 
-                  decentralized systems. Through my undergraduate work and corporate R&D experience, I have developed 
-                  pipelines for Bangla Speech-to-Text, conducted usability audits, and explored 
-                  Explainable AI (XAI) and Federated Learning for secure IoT systems.
+                  For my undergraduate thesis, I ran a mixed-methods usability study of university web services,
+                  combining a student survey (n = 94) with think-aloud sessions and follow-up interviews, and used
+                  thematic analysis to identify 27 usability problems across nine themes. As an R&amp;D intern at
+                  ShellBeeHaken, I built a speech-to-text pipeline for noisy Bangla–English code-mixed speech.
+                  My recent work examines the reliability of AI systems: a systematic review of 57 papers on
+                  hallucination and unlearning in large language models, and BanLegit-Cite, a benchmark for legal
+                  citation reliability in Bangladeshi law.
                 </p>
                 <p>
-                  I am actively seeking opportunities to contribute to research labs, academic departments, 
-                  and postgraduate research (M.Sc./Ph.D.) under international funding frameworks. My ultimate goal 
-                  is to build trustworthy, ethical AI systems that lower barriers to technology access globally.
+                  I want to keep working on research that pairs careful study of people with honest evaluation
+                  of AI, and in the long term to pursue graduate study in HCI and human-centered AI.
                 </p>
               </div>
             </motion.div>

@@ -15,9 +15,17 @@ interface ProjectItem {
 
 const PROJECTS_DATA: ProjectItem[] = [
   {
+    title: "Monsoon SAR2Opt",
+    description:
+      "Generative models (conditional GANs) that reconstruct cloud-covered Sentinel-2 imagery from Sentinel-1 SAR for monsoon flood monitoring in Bangladesh. A SAR water-consistency test checks every generated image for hidden floods or invented water. Over Sylhet in 2022, reusing the last clear image hid 99.1% of 364.5 km² of new flood water. Preliminary results are public, with limitations stated.",
+    technologies: ["PyTorch", "cGAN", "Remote Sensing", "Sentinel-1/2", "GDAL", "Rasterio"],
+    github: "https://github.com/shakeraema/monsoon-sar2opt",
+    category: "AI/ML",
+  },
+  {
     title: "RoadGuardian AI",
     description:
-      "A multi-agent AI platform designed for emergency response coordination and multilingual assistance. Optimizes rescue pipelines under severe workloads.",
+      "A multi-agent AI platform designed for emergency response coordination and multilingual assistance.",
     technologies: ["LangGraph", "FastAPI", "RAG", "ChromaDB"],
     demo: "https://road-gaurdian-ai-v2.vercel.app/",
     category: "AI/ML",
@@ -34,7 +42,7 @@ const PROJECTS_DATA: ProjectItem[] = [
   {
     title: "Bangla STT Pipeline",
     description:
-      "End-to-end speech-to-text recognition pipeline calibrated for Bengali dialect variations. Includes benchmarking modules evaluating WER and CER.",
+      "Speech-to-text pipeline for noisy, Bangla–English code-mixed speech, with preprocessing, ASR benchmarking and WER/CER evaluation.",
     technologies: ["Python", "NLP", "Machine Learning"],
     github: "https://github.com/ema-shakera/STT-TTS-Bangla.git",
     category: "NLP/Speech",
@@ -50,7 +58,7 @@ const PROJECTS_DATA: ProjectItem[] = [
   {
     title: "Parkinson Disease Prediction",
     description:
-      "Machine learning classifier to detect early-onset Parkinson's Disease based on vocal acoustic attributes, achieving high classification confidence.",
+      "Machine learning classifier to detect early-onset Parkinson's Disease based on vocal acoustic attributes.",
     technologies: ["Python", "SVM"],
     github: "https://github.com/shakeraema/ML-Project.git",
     category: "AI/ML",

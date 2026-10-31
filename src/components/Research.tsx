@@ -17,21 +17,35 @@ const TIMELINE_DATA: TimelineItem[] = [
   {
     role: "Researcher — Independent Research",
     org: "Self-directed",
-    supervisor: "BanLegit-Cite: A Benchmark for Legal Citation Reliability in Bangladeshi Law",
+    supervisor: "Monsoon SAR2Opt: SAR-Consistent Reconstruction of Cloudy Sentinel-2 Imagery for Floods",
     supervisorLabel: "Project",
-    duration: "May 2026 – Aug 2026",
+    duration: "2026 – Present",
     highlights: [
-      "Developed a benchmark for evaluating legal citation reliability and fabrication in Bangladeshi law using verified case law, statutory sources, and human annotation.",
+      "Showed that over Sylhet in 2022 no Sentinel-2 acquisition in May–June had under 20% cloud, and that filling gaps with the last clear image hid 99.1% of 364.5 km² of new flood water detected by SAR.",
+      "Built change-aware conditional GANs (PyTorch) and SAR water-consistency metrics that flag generated images that hide floods or invent water. Preliminary results show these metrics expose a failure that MAE and PSNR barely register.",
     ],
   },
   {
     role: "Researcher — Independent Research",
     org: "Self-directed",
-    supervisor: "From Forgetting to Factuality: Formalizing the Unlearning–Hallucination Interaction in Large Language Models",
+    supervisor: "BanLegit-Cite: A Benchmark for Legal Citation Reliability in Bangladeshi Law",
     supervisorLabel: "Project",
-    duration: "Apr 2026 – May 2026",
+    duration: "May 2026 – Aug 2026",
     highlights: [
-      "Proposed the UHIF framework and HalUnlearn-Bench through a systematic review of 57 papers on LLM unlearning and hallucination.",
+      "Developed a benchmark for evaluating legal citation reliability and fabrication in Bangladeshi law, using verified case law and statutory sources.",
+      "Labels were produced by two human annotators and verified by a lawyer.",
+    ],
+  },
+  {
+    role: "Researcher — Independent Research",
+    org: "Self-directed",
+    supervisor: "UHIF Framework and HalUnlearn-Bench",
+    supervisorLabel: "Project",
+    duration: "Apr 2026 – Jun 2026",
+    highlights: [
+      "Proposed the UHIF framework and HalUnlearn-Bench through a systematic review of 57 papers on LLM unlearning and hallucination (From Forgetting to Factuality). Best Paper (ML & AI), LURS Student Research Conference 2026.",
+      "Implemented HalUnlearn-Bench as a controlled study of five unlearning methods (GA, GD, ME, NPO, KL+GA) against a no-unlearning control on Qwen2.5-1.5B-Instruct and TOFU: 18 runs, 19,800 responses, an LLM judge, a rule-based degeneration detector, and two-rater human validation (κ = 0.756).",
+      "Found that for four of the five methods, the lower hallucination rate after unlearning came with degenerate output rather than learned abstention. Journal paper under review.",
     ],
   },
   {
@@ -41,9 +55,9 @@ const TIMELINE_DATA: TimelineItem[] = [
     supervisorLabel: "Project",
     duration: "Dec 2025 – May 2026",
     highlights: [
-      "Built a modular Bangla STT pipeline for noisy, code-mixed speech and benchmarked 15+ preprocessing and ASR configurations.",
-      "Developed text normalization and token-level language identification techniques for Bangla-English mixed speech.",
-      "Implemented post-processing methods and evaluated system performance using WER, CER, and EN-WER metrics.",
+      "Built a modular Bangla speech-to-text pipeline for noisy, Bangla–English code-mixed speech and benchmarked 15+ preprocessing and ASR configurations.",
+      "Developed text normalization and token-level language identification for Bangla–English mixed speech.",
+      "Implemented post-processing methods and evaluated system performance with WER, CER and EN-WER.",
     ],
   },
   {
@@ -53,9 +67,19 @@ const TIMELINE_DATA: TimelineItem[] = [
     supervisorLabel: "Supervisor",
     duration: "Jun 2025 – Nov 2025",
     highlights: [
-      "Conducted mixed-methods usability evaluation (n=92; survey, think-aloud, interviews) using SUS and NASA-TLX to assess university web-system usability.",
-      "Performed thematic analysis (Braun & Clarke), identifying 7 usability themes and proposing the Fragmentation–Frustration Cycle.",
-      "Designed a high-fidelity Figma prototype addressing identified usability issues and improving navigation efficiency.",
+      "Conducted a mixed-methods usability study of university web services: a student survey (n = 94), followed by think-aloud sessions and follow-up interviews with 4 participants; measured perceived usability and workload with SUS and NASA-TLX.",
+      "Performed thematic analysis (Braun & Clarke), identifying 27 usability problems across 9 themes, and proposed the Fragmentation–Peer Coping Cycle.",
+      "Designed a high-fidelity Figma prototype of a unified student portal addressing the identified problems and reviewed it with returning participants. The university's centralised student portal, released after the study, includes several similar features.",
+    ],
+  },
+  {
+    role: "Research Assistant — Data Collector",
+    org: "Bengal AI",
+    supervisor: "Thesis Data Collection",
+    supervisorLabel: "Project",
+    duration: "2024",
+    highlights: [
+      "Collected data for a research thesis at Bengal AI.",
     ],
   },
 ];
@@ -73,10 +97,9 @@ const NODES: Node[] = [
   { id: "aiml", label: "AI/ML & Multimodal", description: "Foundational Artificial Intelligence, Deep Learning, and Multimodal architectures.", x: 50, y: 50, color: "var(--color-accent)" },
   { id: "nlp", label: "NLP & LLMs", description: "Natural Language Processing, Large Language Models, and Bangla language technologies.", x: 20, y: 30, color: "#f59e0b" },
   { id: "speech", label: "Speech & Language", description: "Acoustic Modeling, ASR, and Speech Synthesis systems.", x: 15, y: 65, color: "#10b981" },
-  { id: "hci", label: "Human-AI Interaction (HCI)", description: "Designing intuitive, safe interfaces and evaluating human-AI collaboration workloads (HCI & Usability).", x: 45, y: 15, color: "#ec4899" },
+  { id: "hci", label: "Human-AI Interaction (HCI)", description: "Mixed-methods user research: surveys, think-aloud studies, interviews, SUS/NASA-TLX and thematic analysis.", x: 45, y: 15, color: "#ec4899" },
   { id: "xai", label: "Explainable AI (XAI)", description: "Interpretability, model explanation methods, and trustworthy AI.", x: 80, y: 30, color: "#8b5cf6" },
-  { id: "ppml", label: "Privacy & Federated Learning", description: "Distributed federated learning models and secure, privacy-preserving machine learning architectures.", x: 85, y: 65, color: "#3b82f6" },
-  { id: "safety", label: "AI Safety & IoT Security", description: "Ensuring model safety, robustness, prompt injection guardrails, and decentralized IoT Security protocols.", x: 55, y: 85, color: "#ef4444" },
+  { id: "eval", label: "AI Reliability & Evaluation", description: "Benchmarks and human validation for detecting when AI output is plausible but wrong.", x: 70, y: 75, color: "#ef4444" },
   { id: "agentic", label: "Agentic AI", description: "Multi-agent workflows, autonomous reasoning, and server-side role-based coordination.", x: 25, y: 85, color: "#14b8a6" },
 ];
 
@@ -84,8 +107,6 @@ const EDGES = [
   { source: "aiml", target: "nlp" },
   { source: "aiml", target: "speech" },
   { source: "aiml", target: "xai" },
-  { source: "aiml", target: "ppml" },
-  { source: "aiml", target: "safety" },
   { source: "aiml", target: "agentic" },
   { source: "nlp", target: "speech" },
   { source: "nlp", target: "hci" },
@@ -93,10 +114,11 @@ const EDGES = [
   { source: "speech", target: "hci" },
   { source: "speech", target: "agentic" },
   { source: "hci", target: "xai" },
-  { source: "xai", target: "ppml" },
-  { source: "xai", target: "safety" },
-  { source: "ppml", target: "safety" },
-  { source: "safety", target: "agentic" },
+  { source: "aiml", target: "eval" },
+  { source: "nlp", target: "eval" },
+  { source: "hci", target: "eval" },
+  { source: "xai", target: "eval" },
+  { source: "agentic", target: "eval" },
 ];
 
 export default function Research() {
@@ -182,7 +204,7 @@ export default function Research() {
                 <span>Interdisciplinary Focus Graph</span>
               </h3>
               <p className="text-xs sm:text-sm text-muted-text leading-relaxed">
-                Click or hover over any node below to discover how my research domains bridge machine learning capabilities with human accessibility and system security.
+                Click or hover over any node below to discover how my research domains connect how people experience technology with how AI systems are evaluated.
               </p>
             </div>
 
@@ -383,15 +405,22 @@ const PUBLICATIONS_DATA: Publication[] = [
   {
     title: "BanLegit-Cite: A Benchmark for Legal Citation Reliability in Bangladeshi Law",
     authors: "Shakera Jannat, et al.",
-    venue: "Submitted to ICCIT 2026",
-    status: "Submitted to a Conference",
+    venue: "Conference submission",
+    status: "Under review",
     year: "2026",
   },
   {
     title: "Undergraduate Thesis Manuscript: Usability Evaluation of University Web Systems",
     authors: "Shakera Jannat, Sayma Sultana Chowdhury",
     venue: "SUST Undergraduate Thesis",
-    status: "Manuscript finalized and submitted to a conference; under review",
+    status: "Under review",
+    year: "2026",
+  },
+  {
+    title: "Journal paper on HalUnlearn-Bench: unlearning methods, hallucination and degenerate output in LLMs",
+    authors: "Shakera Jannat, et al.",
+    venue: "Journal submission",
+    status: "Under review",
     year: "2026",
   },
 ];

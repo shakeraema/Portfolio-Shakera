@@ -20,11 +20,11 @@ const ACHIEVEMENTS_DATA: Achievement[] = [
     badge: "Global Finalist",
     badgeType: "featured",
     year: "2025",
-    details: "Recognized for developing space-data driven solution responding to critical earth challenges. Selected out of thousands of teams globally.",
+    details: "Recognized for developing space-data driven solution responding to critical earth challenges.",
   },
   {
     title: "Finalist — International AI in Healthcare Hackathon",
-    context: "Global AI competition focused on building healthcare diagnostic models in Tashkent, Uzbekistan.",
+    context: "Built a VR support system for children with ADHD; gathered needs from therapists and children at a school in Mirpur, Dhaka, with consent from the school, therapists and guardians.",
     badge: "Finalist",
     badgeType: "finalist",
     year: "2026",
@@ -59,7 +59,7 @@ const ACHIEVEMENTS_DATA: Achievement[] = [
   },
   {
     title: "2nd Place — UIHP Cohort-2, SUST (\"Kotha\")",
-    context: "SUST incubation cohort. Awarded BDT 50,000 in recognition of project innovation.",
+    context: "SUST incubation cohort. \"Kotha\", a Bangla browsing assistant, was awarded BDT 50,000.",
     badge: "2nd Place Winner",
     badgeType: "winner",
     year: "2025",
@@ -98,6 +98,13 @@ const ACHIEVEMENTS_DATA: Achievement[] = [
     badge: "Participant",
     badgeType: "selected",
     year: "2026",
+  },
+  {
+    title: "Organizer — SUST SWE Technovent",
+    context: "Organized the SUST Software Engineering tech event.",
+    badge: "Organizer",
+    badgeType: "selected",
+    year: "2023",
   },
 ];
 

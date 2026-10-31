@@ -35,8 +35,7 @@ export default function Page() {
       "Multimodal AI",
       "Explainable AI",
       "AI Safety",
-      "Human-AI Interaction",
-      "Privacy-Preserving Machine Learning"
+      "Human-AI Interaction"
     ]
   };
 

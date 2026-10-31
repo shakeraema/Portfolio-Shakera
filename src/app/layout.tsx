@@ -19,7 +19,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Shakera Jannat Ema | AI/ML Research Portfolio",
+  title: "Shakera Jannat Ema | HCI & Trustworthy AI Research",
   description: "Academic and research portfolio of Shakera Jannat Ema, early-career researcher in NLP, Speech Processing, HCI, and trustworthy AI.",
   keywords: [
     "Artificial Intelligence",
@@ -32,9 +32,7 @@ export const metadata: Metadata = {
     "Research Assistant",
     "Lecturer",
     "Academic Portfolio",
-    "Explainable AI",
-    "Federated Learning",
-    "IoT Security"
+    "Explainable AI"
   ],
   authors: [{ name: "Shakera Jannat Ema" }],
 };

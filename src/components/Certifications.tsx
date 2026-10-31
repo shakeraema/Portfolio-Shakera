@@ -33,28 +33,13 @@ const CERTIFICATIONS_DATA: Certification[] = [
     year: "2023",
   },
   {
-    name: "NASA Space Apps Challenge Global Finalist",
-    issuer: "NASA Space Apps Challenge",
-    year: "2025",
-  },
-  {
-    name: "Best Paper Award (ML & AI)",
-    issuer: "Leading University Research Society (LURS)",
+    name: "TAF Bootcamp (3 days)",
+    issuer: "Daffodil International University",
     year: "2026",
   },
   {
-    name: "Pre-Finalist — ICSC",
-    issuer: "Indian Computing Olympiad / ICSC",
-    year: "2026",
-  },
-  {
-    name: "Finalist — International AI in Healthcare Hackathon",
-    issuer: "Tashkent, Uzbekistan",
-    year: "2026",
-  },
-  {
-    name: "Top-30 Finalist (24th) — THE INFINITY AI BUILDFEST",
-    issuer: "The Infinity AI Buildfest",
+    name: "Teaching Apprenticeship Fellowship & Building Skills for TAF",
+    issuer: "GoEdu",
     year: "2026",
   },
 ];
